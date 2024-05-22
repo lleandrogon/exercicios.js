@@ -8,7 +8,7 @@ function bissexto(ano) {
     } else if (ano % 4 == 0) {
         return "É ano bissexto!";
     } else {
-        return "Não é ano bissexto!"; ,
+        return "Não é ano bissexto!";
     }
 }
 
