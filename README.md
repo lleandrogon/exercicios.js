@@ -1,2 +1,2 @@
 # exercicios.js
- Exercícios de fundemantos de JavaScript
+ Exercícios de fundamentos de JavaScript
