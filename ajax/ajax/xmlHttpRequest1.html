@@ -11,6 +11,48 @@
     <h1>Estados</h1>
 
     <script>
-        // ...
+            function ajax(config) {
+        const xhr = new XMLHttpRequest();
+        xhr.open(config.method, config.url, true);
+
+        xhr.onload = e => {
+            if (xhr.status === 200) {
+                config.success(xhr.response);
+            } else if (xhr.status >= 400) {
+                config.error({
+                    codigo: xhr.status,
+                    texto: xhr.statusText
+                });
+            }
+        };
+
+        xhr.send();
+    }
+
+    function criarTabela(estados) {
+        const tabela = document.createElement('table');
+        estados.forEach(estado => {
+            const linha = document.createElement('tr');
+            const celula = document.createElement('td');
+            celula.textContent = estado.nome;
+            linha.appendChild(celula);
+            tabela.appendChild(linha);
+        });
+        document.body.appendChild(tabela);
+    }
+
+    ajax({
+        url: "dados/estados.json",
+        method: "get",
+        success(resposta) {
+            const estados = JSON.parse(resposta);
+            criarTabela(estados);
+        },
+        error(e) {
+            const msg = document.createTextNode(`${e.codigo}: ${e.texto}`);
+            document.body.appendChild(msg);
+        }
+    });
+</script>
     </script>
 </body>
