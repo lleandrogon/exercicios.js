@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Layout from "../components/Layout";
 import Tabela from "../components/Tabela";
 import Cliente from "../../core/Cliente";
+import Botao from '../components/Botao';
+import Formulario from '../components/Formulario';
 
 export default function Home() {
 
@@ -28,9 +30,13 @@ export default function Home() {
             text-white
         `}>
             <Layout titulo="Cadastro Simples">
+                <div className='flex justify-end'>
+                    <Botao cor="blue" className='mb-4'>Novo Cliente</Botao>
+                </div>
                 <Tabela clientes={clientes} clienteSelecionado={clienteSelecionado}
-                clienteExcluido={clienteExcluido}
-            />
+                    clienteExcluido={clienteExcluido}
+                />
+                <Formulario cliente={clientes[3]}></Formulario>
             </Layout>
         </div>
     )
