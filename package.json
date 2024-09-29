@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "@angular/common": "^18.2.6",
+    "@angular/core": "^18.2.6",
+    "@angular/platform-browser": "^18.2.6",
+    "@angular/router": "^18.2.6",
     "lodash": "^4.17.21",
     "next": "^14.2.7",
     "node-schedule": "^2.1.1",

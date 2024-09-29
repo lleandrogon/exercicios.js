@@ -1,0 +1,27 @@
+* {
+    color: black;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .logo {
+    max-height: 32px;
+}
+
+.header .title-group {
+    padding: 25px;
+}
+
+.header .title-group i {
+    padding-right: 5px;
+}
