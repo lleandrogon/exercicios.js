@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-footer',
   standalone: true,
   imports: [CommonModule, MatToolbarModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
 })
-export class HeaderComponent {}
+export class FooterComponent {}
